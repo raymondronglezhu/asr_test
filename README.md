@@ -19,12 +19,12 @@ data/
 
 ## Audio File Naming Convention
 
-Audio files should be named using a 3-character code format: `ABC.wav`
+Audio files should be named using a 3-character code format: `XYZ.wav`
 
 Where:
-- **A** = Language (A=EN, B=EN_ACCENT, C=CN, D=SV)
-- **B** = Speech Type (A=REGULAR, B=QUIET, C=WHISPER)
-- **C** = Background (A=NIGHTCLUB, B=CAFE, C=SPEAKING)
+- **X** = Language (A=EN, B=EN_ACCENT, C=CN, D=SV)
+- **Y** = Speech Type (A=REGULAR, B=QUIET, C=WHISPER)
+- **Z** = Background (A=NIGHTCLUB, B=CAFE, C=SPEAKING)
 
 ### Examples:
 - `ACB.wav` = English whisper with cafe background
