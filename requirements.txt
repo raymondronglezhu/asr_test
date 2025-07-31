@@ -1,0 +1,5 @@
+SpeechRecognition==3.10.0
+jiwer==3.0.3
+openai-whisper==20240930
+pandas==2.1.4
+pathlib2==2.3.7 
