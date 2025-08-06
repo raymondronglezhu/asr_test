@@ -1,6 +1,6 @@
 # Skywalk vs Nothing ENC Performance Test
 
-This repository contains a test script to compare the performance of Skywalk's ENC solution against the native ENC on Elekid (referred to as "Nothing") in terms of Word Error Rate (WER) and Character Error Rate (CER).
+This repository contains a test script to compare the performance of Skywalk's ENC solution against the native ENR on Elekid (referred to as "Nothing") in terms of Word Error Rate (WER) and Character Error Rate (CER).
 
 ## Overview
 
@@ -8,6 +8,50 @@ The test evaluates audio recordings across multiple variables:
 - **Languages**: English, English (heavy accent), Chinese, Swedish
 - **Speech Types**: Regular indoor speaking, quiet speech, whisper
 - **Background Noise**: Nightclub scene, cafe scene, someone else speaking
+
+## Scripts
+
+### 1. Simple ASR Script (`simple_asr.py`)
+For processing a single audio file with quick ASR results:
+
+```bash
+# Basic usage (auto-detects language from filename)
+python simple_asr.py data/skywalk/AAA.wav
+
+# With custom reference text
+python simple_asr.py data/skywalk/AAA.wav --reference "Your custom reference text here"
+
+# Save results to file
+python simple_asr.py data/skywalk/AAA.wav --output results.json
+```
+
+**Output:**
+- WER and CER scores
+- Reference text used
+- Transcribed text
+- Optional JSON output file
+
+### 2. Demo ASR Script (`demo_simple_asr.py`)
+For testing the functionality without requiring actual audio files:
+
+```bash
+# Demo mode (simulates transcription)
+python demo_simple_asr.py data/skywalk/AAA.wav --demo
+
+# Demo with custom reference
+python demo_simple_asr.py data/skywalk/CAA.wav --demo --reference "Custom text"
+```
+
+### 3. Full Test Script (`test_script.py`)
+For comprehensive comparison between Skywalk and Nothing systems:
+
+```bash
+python test_script.py
+```
+
+**Output:**
+- Detailed comparison report (`enc_test_report.txt`)
+- JSON results (`enc_test_results.json`)
 
 ## File Structure
 
